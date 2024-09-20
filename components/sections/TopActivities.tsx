@@ -53,7 +53,7 @@ export default function TopActivities({
         isLoading={isLoading}
       />
       {!isLoading && activities ? (
-        <div className="ml-8">
+        <div className="ml-8 bg-red-100 p-4 rounded-md">
           {editMode ? (
             <EditList
               arrayData={activities}

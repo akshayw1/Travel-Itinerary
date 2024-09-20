@@ -155,7 +155,7 @@ const NewPlanForm = ({closeModal}: {closeModal: Dispatch<SetStateAction<boolean>
                       <input
                         type="checkbox"
                         className="hidden"
-                        checked={field.value?.includes(activity.id) ?? false}
+                        checked={field?.value?.includes(activity.id)}
                         onChange={(e) => {
                           if (e.target.checked) {
                             field.onChange([...field.value, activity.id]);
@@ -204,7 +204,7 @@ const NewPlanForm = ({closeModal}: {closeModal: Dispatch<SetStateAction<boolean>
                         type="radio"
                         className="hidden"
                         name="companion"
-                        checked={field.value == companion.id ?? false}
+                        checked={field.value === companion.id}
                         onChange={(e) => {
                           if (e.target.checked) {
                             field.onChange(companion.id);

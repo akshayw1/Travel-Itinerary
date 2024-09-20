@@ -147,7 +147,7 @@ const TopPlacesToVisit = ({
                           variant="outline"
                           disabled={isDeleting}
                           className="border-none hover:scale-110 duration-200 transition-all "
-                          onClick={(e) => {
+                          onClick={(e:any) => {
                             e.preventDefault();
                             e.stopPropagation();
                             handleDeletPlace(place.id);
@@ -179,7 +179,7 @@ export const SkeletonForTopPlacesToVisit = ({isMaps = false}: {isMaps?: boolean}
       {isMaps ? (
         <div className="flex gap-2 justify-center items-center">
           <Loading />
-          <p className="font-bold text-blue-500">Loading Maps</p>
+          <p className="font-bold text-red-500">Loading Maps</p>
         </div>
       ) : (
         <>

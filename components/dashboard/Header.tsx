@@ -1,18 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import {AuthLoading, Authenticated, Unauthenticated} from "convex/react";
 import {SignInButton, UserButton} from "@clerk/nextjs";
 
 import {Loading} from "@/components/shared/Loading";
-import DrawerWithDialog from "@/components/shared/DrawerWithDialog";
-import PlanComboBox from "@/components/plan/PlanComboBox";
-import {navlinks} from "@/lib/constants";
+
 import {cn} from "@/lib/utils";
-import useAuth from "@/hooks/useAuth";
-import {MapPinIcon} from "lucide-react";
 import {ThemeDropdown} from "@/components/ThemeDropdown";
-import FeedbackSheet from "@/components/common/FeedbackSheet";
 import Logo from "@/components/common/Logo";
 import MobileMenu from "@/components/dashboard/MobileMenu";
 
@@ -40,8 +34,7 @@ const Header = () => {
             </Unauthenticated>
             <Authenticated>
               <div className="flex justify-center items-center gap-2">
-                <DrawerWithDialog />
-                <FeedbackSheet />
+                
                 <ThemeDropdown />
                 <UserButton afterSignOutUrl="/" />
               </div>

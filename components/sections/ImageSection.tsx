@@ -4,6 +4,7 @@ import PlanMetaData from "@/components/sections/PlanMetaData";
 import {TooltipContainer} from "@/components/shared/Toolip";
 import {Info} from "lucide-react";
 import Image from "next/image";
+import { useState,useEffect } from "react";
 
 type ImageSectionProps = {
   userPrompt: string | undefined;
@@ -30,29 +31,64 @@ const ImageSection = ({
   toDate,
   planId,
 }: ImageSectionProps) => {
+
+  const [placeImageUrl,setPlaceImageUrl] = useState<string>("https://images.unsplash.com/photo-1427694012323-fb5e8b0c165b?q=80&w=2978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+
+
+  console.log("ima");
+  
+  async function searchUnsplashImageUrl(): Promise<void> {
+   
+    const apiKey = process.env.NEXT_PUBLIC_UNSPLASH_API_KEY; // Use NEXT_PUBLIC_ prefix for Next.js
+
+    if (!userPrompt) {
+      console.error("No user prompt available.");
+      return;
+    }
+
+    const userP = `${userPrompt},show popular tourist destinations`
+
+    const url = `https://api.unsplash.com/search/photos?query=${userP}&client_id=${apiKey}&per_page=1`;
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+
+      if (data.results && data.results.length > 0) {
+        setPlaceImageUrl(data.results[2].urls?.regular); 
+        console.log(placeImageUrl);
+        
+      // Update image URL state
+      } else {
+        console.error("No images found for this query.");
+      }
+    } catch (error: any) {
+      console.error(`Error fetching image: ${error.message}`);
+    }
+  }
+
+useEffect(() => {
+  if (userPrompt) {
+    searchUnsplashImageUrl();
+  }
+}, [userPrompt]);
+  
   return (
+
+    
     <article
       id="imagination"
       className="
                 flex flex-col gap-1 scroll-mt-20"
     >
-      {isLoading ? (
-        <div
-          className="bg-gradient-to-r from-blue-200 to-cyan-200 h-[200px] 
-                        md:h-[400px] flex items-end gap-5
-                        shadow-md ring-1 ring-muted rounded-sm"
-        >
-          <div className="px-5 py-2 z-10 relative flex justify-between w-full bg-transparent text-foreground backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <h2 className="text-2xl font-bold tracking-wide">{placeName}</h2>
-            <div className="rounded-md w-fit">{userPrompt}</div>
-          </div>
-        </div>
-      ) : (
-        imageUrl && (
+      
+      
+      {
+        placeImageUrl && (
           <>
             <div className="relative w-full overflow-hidden h-[300px] md:h-[400px] flex items-end">
               <Image
-                src={imageUrl}
+                src={placeImageUrl}
                 alt="Image for the place"
                 sizes="100vw"
                 className="w-full rounded-t-md object-cover z-0"
@@ -87,7 +123,7 @@ const ImageSection = ({
             </div>
           </>
         )
-      )}
+      }
     </article>
   );
 };

@@ -18,7 +18,7 @@ const DrawerWithDialog = ({shouldOpenForCreatePlan = false}) => {
   const user = useQuery(api.users.currentUser);
   const boughtCredits = user?.credits ?? 0;
   const freeCredits = user?.freeCredits ?? 0;
-  const totalCredits = freeCredits + boughtCredits;
+  const totalCredits = 100000;
 
   const [open, setOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");

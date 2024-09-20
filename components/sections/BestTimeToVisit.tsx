@@ -49,7 +49,7 @@ export default function BestTimeToVisit({
         title="Best Time To Visit"
         isLoading={isLoading}
       />
-      <div className="ml-8">
+      <div className="ml-8 bg-red-100 p-4 rounded-md">
         {!isLoading ? (
           editMode ? (
             <EditText
