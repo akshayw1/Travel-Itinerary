@@ -2,20 +2,20 @@ import Header from "@/components/dashboard/Header";
 import type {Metadata} from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.travelplannerai.online"),
+  metadataBase: new URL("https:/wanderatlan.com"),
   title: {
     default: "Travel Planner AI - Your Smart Travel Planner",
     template: "%s | Travel Planner AI - Your Smart Travel Planner",
   },
   description:
-    "Travel Planner AI provides intelligent travel suggestions, personalized itineraries, and seamless trip planning. Plan your perfect trip with ease.",
+    "Intelligent travel suggestions, personalized itineraries, and seamless trip planning. Plan your perfect trip with ease.",
   keywords:
-    "travel planner, AI travel planner, smart travel, travel suggestions, destination insights, personalized itineraries, trip planning, travel tips, vacation planning",
+    " AI travel planner, smart travel, travel suggestions, destination insights, personalized itineraries, trip planning, travel tips, vacation planning",
   openGraph: {
-    title: "Travel Planner AI - Your Smart Travel Planner",
+    title: "I - Your Smart Travel Planner",
     description:
-      "Travel Planner AI provides intelligent travel suggestions, personalized itineraries, and seamless trip planning. Plan your perfect trip with ease.",
-    url: "https://www.travelplannerai.online",
+      " provides intelligent travel suggestions, personalized itineraries, and seamless trip planning. Plan your perfect trip with ease.",
+    url: process.env.CLIENT_URL,
     type: "website",
     siteName: "TravelPlannerAI",
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url: "opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Travel Planner AI",
+        alt: "Wander Atlan",
       },
     ],
   },

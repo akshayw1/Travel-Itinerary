@@ -9,12 +9,12 @@ export default function Logo() {
     <div className="hidden md:flex gap-10 items-center justify-start flex-1">
       <Link href={isAuthenticated ? "/dashboard" : "/"}>
         <div className="flex gap-1 justify-center items-center">
-          <MapPinIcon className="h-10 w-10 text-blue-500" />
+          <MapPinIcon className="h-10 w-10 text-red-500" />
           <div className="flex flex-col leading-5 font-bold text-xl">
-            <span>Travel</span>
+            <span>Wander</span>
             <span>
-              Planner
-              <span className="text-blue-500 ml-0.5">AI</span>
+            
+              <span className="text-red-500 ml-0.5">Atlan</span>
             </span>
           </div>
         </div>

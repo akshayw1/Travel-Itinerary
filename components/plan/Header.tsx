@@ -8,7 +8,6 @@ import DrawerWithDialog from "@/components/shared/DrawerWithDialog";
 import PlanComboBox from "@/components/plan/PlanComboBox";
 import {cn} from "@/lib/utils";
 import {ThemeDropdown} from "@/components/ThemeDropdown";
-import FeedbackSheet from "@/components/common/FeedbackSheet";
 import Logo from "@/components/common/Logo";
 import MobileMenu from "@/components/plan/MobileMenu";
 
@@ -38,8 +37,7 @@ const Header = ({isPublic}: {isPublic: boolean}) => {
             <Authenticated>
               <div className="flex justify-center items-center gap-2">
                 <PlanComboBox />
-                <DrawerWithDialog />
-                <FeedbackSheet />
+               
                 <ThemeDropdown />
                 <UserButton afterSignOutUrl="/" />
               </div>

@@ -45,7 +45,7 @@ export default function AboutThePlace({content, isLoading, planId, allowEdit}: A
         title="About the Place"
         isLoading={isLoading}
       />
-      <div className="ml-8">
+      <div className="ml-8 bg-red-100 p-4 rounded-md">
         {!isLoading ? (
           editMode ? (
             <EditText

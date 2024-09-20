@@ -10,6 +10,16 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "unsplash.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+      },
+      {
+        protocol: "https",
         hostname: "kindred-rhinoceros-563.convex.cloud",
         port: "",
       },

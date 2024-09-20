@@ -29,7 +29,8 @@ const Sidebar = ({
   }, [planSections, isPublic]);
 
   return (
-    <aside className="space-y-6 sticky top-[5.6rem] h-fit">
+    <aside className="space-y-6 sticky top-[5.6rem] bg-red-100 w-full p-10 h-fit rounded-md
+    ">
       <div className="space-y-2">
         <h2 className="mb-2 md:text-lg text-base font-semibold tracking-tight">Your Plan</h2>
         <div className="flex flex-col">
@@ -54,46 +55,7 @@ const Sidebar = ({
           ))}
         </div>
       </div>
-      <div className="space-y-2">
-        <h2 className="mb-2 text-lg font-semibold tracking-tight">Control Center</h2>
-        <div className="flex flex-col">
-          {controlCenterSections.map((link) => {
-            if (isPublic)
-              return (
-                <TooltipContainer
-                  key={link.id}
-                  text="This section is not available for community shared plans"
-                >
-                  <div
-                    className="flex justify-start items-center gap-2 whitespace-break-spaces p-2
-      text-muted-foreground dark:text-muted-foreground/50 text-sm cursor-not-allowed"
-                  >
-                    {link.icon}
-                    <span className="md:text-left">{link.title}</span>
-                    <LockIcon className="w-4 h-4" />
-                  </div>
-                </TooltipContainer>
-              );
-
-            return (
-              <Link href={isPublic ? `#` : `/plans/${planId}/${link.id}`} key={link.id}>
-                <TooltipContainer text={link.tooltipText}>
-                  <Button
-                    disabled={isPublic}
-                    aria-label={link.id}
-                    variant="ghost"
-                    className="w-full justify-start items-center gap-2 whitespace-break-spaces px-2
-                      text-foreground dark:text-muted-foreground hover:dark:text-foreground"
-                  >
-                    {link.icon}
-                    <span className="md:text-left">{link.title}</span>
-                  </Button>
-                </TooltipContainer>
-              </Link>
-            );
-          })}
-        </div>
-      </div>
+     
     </aside>
   );
 };

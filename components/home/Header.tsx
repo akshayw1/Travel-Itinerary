@@ -7,7 +7,6 @@ import {Loading} from "@/components/shared/Loading";
 import DrawerWithDialog from "@/components/shared/DrawerWithDialog";
 import {cn} from "@/lib/utils";
 import {ThemeDropdown} from "@/components/ThemeDropdown";
-import FeedbackSheet from "@/components/common/FeedbackSheet";
 import Logo from "@/components/common/Logo";
 import MenuItems from "@/components/home/MenuItems";
 import MobileMenu from "@/components/home/MobileMenu";
@@ -41,8 +40,7 @@ const Header = () => {
             </Unauthenticated>
             <Authenticated>
               <div className="flex justify-center items-center gap-2">
-                <DrawerWithDialog />
-                <FeedbackSheet />
+             
                 <ThemeDropdown />
                 <UserButton afterSignOutUrl="/" />
               </div>

@@ -13,7 +13,6 @@ import {cn} from "@/lib/utils";
 import useAuth from "@/hooks/useAuth";
 import {MapPinIcon} from "lucide-react";
 import {ThemeDropdown} from "@/components/ThemeDropdown";
-import FeedbackSheet from "@/components/common/FeedbackSheet";
 
 const Header = () => {
   const {isCurrentPathDashboard, isCurrentPathHome, isAuthenticated} = useAuth();
@@ -79,7 +78,7 @@ const Header = () => {
               <div className="flex justify-center items-center gap-2">
                 {!isCurrentPathDashboard && !isCurrentPathHome && <PlanComboBox />}
                 <DrawerWithDialog />
-                <FeedbackSheet />
+             
                 <ThemeDropdown />
                 <UserButton afterSignOutUrl="/" />
               </div>

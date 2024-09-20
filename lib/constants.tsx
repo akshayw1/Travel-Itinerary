@@ -35,8 +35,8 @@ import {ReactNode} from "react";
 
 export const navlinks = [
   {text: "How it works", id: "how-it-works"},
-  {text: "Community Plans", id: "public-plans"},
-  {text: "Pricing", id: "pricing"},
+  // {text: "Community Plans", id: "public-plans"},
+  // {text: "Pricing", id: "pricing"},
 ];
 
 export const features = [
@@ -84,23 +84,17 @@ export const planSections: {
   icon: ReactNode;
   isPublic: boolean;
 }[] = [
-  {
-    id: "imagination",
-    name: "Your Imagination",
-    icon: <Lightbulb className="mr-2 h-4 w-4" />,
-    isPublic: true,
-  },
+  // {
+  //   id: "imagination",
+  //   name: "Your Imagination",
+  //   icon: <Lightbulb className="mr-2 h-4 w-4" />,
+  //   isPublic: true,
+  // },
   {
     id: "abouttheplace",
     name: "About the Place",
     icon: <Info className="mr-2 h-4 w-4" />,
     isPublic: true,
-  },
-  {
-    id: "weather",
-    name: "Weather",
-    icon: <CloudDrizzle className="mr-2 h-4 w-4" />,
-    isPublic: false,
   },
   {
     id: "adventuresactivitiestodo",

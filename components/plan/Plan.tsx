@@ -11,6 +11,9 @@ import {
   LocalCuisineRecommendations,
   PackingChecklist,
 } from "@/components/sections";
+import Image from 'next/image';
+
+import bgimage from "../../public/bgimage.jpeg"
 
 import usePlan from "@/hooks/usePlan";
 import {usePlanContext} from "../../contexts/PlanContextProvider";
@@ -24,23 +27,17 @@ import Weather from "@/components/sections/Weather";
 
 type PlanProps = {
   planId: string;
-  isNewPlan: boolean;
-  isPublic: boolean;
+
 };
 
-const Plan = ({planId, isNewPlan, isPublic}: PlanProps) => {
-  const {isLoading, plan, shouldShowAlert} = usePlanContext();
+const Plan = ({planId}: PlanProps) => {
+  const {isLoading, plan} = usePlanContext();
+  {console.log("ssa" + plan?.userPrompt)}
 
   return (
     <section className="h-full flex flex-col gap-10">
-      {plan?.isSharedPlan && (
-        <Alert>
-          <Users className="h-4 w-4" />
-          <AlertTitle className="font-semibold">Shared Access!</AlertTitle>
-          <AlertDescription>You are currently viewing a shared Travel Plan.</AlertDescription>
-        </Alert>
-      )}
-      <AlertForAI show={shouldShowAlert} />
+
+     
       <ImageSection
         userPrompt={plan?.userPrompt}
         companion={plan?.companion}
@@ -59,7 +56,7 @@ const Plan = ({planId, isNewPlan, isPublic}: PlanProps) => {
         content={plan?.abouttheplace}
         allowEdit={true}
       />
-      <Weather placeName={plan?.nameoftheplace} />
+      {/* <Weather placeName={plan?.nameoftheplace} /> */}
       <TopActivities
         activities={plan?.adventuresactivitiestodo}
         planId={planId}
