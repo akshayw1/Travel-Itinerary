@@ -69,7 +69,7 @@ const Weather = ({placeName}: {placeName: string | undefined}) => {
           </WeatherTile>
         </div>
       ) : (
-        <p className="ml-8">Error loading weather information for {placeName}</p>
+        <p className="ml-8">Error loading weathsser information for {placeName}</p>
       )}
     </SectionWrapper>
   );
