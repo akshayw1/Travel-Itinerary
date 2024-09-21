@@ -6,10 +6,8 @@ import Pulse from "@/components/shared/Pulse";
 import {Button} from "@/components/ui/button";
 import {usePlanContext} from "@/contexts/PlanContextProvider";
 
-import {controlCenterSections, planSections} from "@/lib/constants";
-import {LockIcon} from "lucide-react";
-import {TooltipContainer} from "@/components/shared/Toolip";
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+import {planSections} from "@/lib/constants";
+
 import {useMemo} from "react";
 
 const Sidebar = ({

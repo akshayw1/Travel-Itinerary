@@ -4,28 +4,21 @@ import Header from "@/components/home/Header";
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
   title: {
-    default: "Travel Planner AI - Your Smart Travel Planner",
-    template: "%s | Travel Planner AI - Your Smart Travel Planner",
+    default: "WanderAtlan - Your Smart Travel Planner",
+    template: "%s | WanderAtlan - Your Smart Travel Planner",
   },
   description:
-    "Travel Planner AI provides intelligent travel suggestions, personalized itineraries, and seamless trip planning. Plan your perfect trip with ease.",
+    "WanderAtlan provides intelligent travel suggestions, personalized itineraries, and seamless trip planning. Plan your perfect trip with ease.",
   keywords:
     "travel planner, AI travel planner, smart travel, travel suggestions, destination insights, personalized itineraries, trip planning, travel tips, vacation planning",
   openGraph: {
-    title: "Travel Planner AI - Your Smart Travel Planner",
+    title: "WanderAtlan - Your Smart Travel Planner",
     description:
-      "Travel Planner AI provides intelligent travel suggestions, personalized itineraries, and seamless trip planning. Plan your perfect trip with ease.",
+      "WanderAtlan provides intelligent travel suggestions, personalized itineraries, and seamless trip planning. Plan your perfect trip with ease.",
     url: "http://localhost:3000",
     type: "website",
-    siteName: "TravelPlannerAI",
-    images: [
-      {
-        url: "opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Travel Planner AI",
-      },
-    ],
+    siteName: "WanderAtlan",
+
   },
 };
 

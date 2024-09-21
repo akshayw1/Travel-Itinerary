@@ -4,8 +4,8 @@ import type {Metadata} from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https:/wanderatlan.com"),
   title: {
-    default: "Travel Planner AI - Your Smart Travel Planner",
-    template: "%s | Travel Planner AI - Your Smart Travel Planner",
+    default: "WanderAtlan - Your Smart Travel Planner",
+    template: "%s | WanderAtlan - Your Smart Travel Planner",
   },
   description:
     "Intelligent travel suggestions, personalized itineraries, and seamless trip planning. Plan your perfect trip with ease.",
@@ -17,15 +17,7 @@ export const metadata: Metadata = {
       " provides intelligent travel suggestions, personalized itineraries, and seamless trip planning. Plan your perfect trip with ease.",
     url: process.env.CLIENT_URL,
     type: "website",
-    siteName: "TravelPlannerAI",
-    images: [
-      {
-        url: "opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Wander Atlan",
-      },
-    ],
+    siteName: "WanderAtlan",
   },
 };
 

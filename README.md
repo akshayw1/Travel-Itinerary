@@ -1,11 +1,11 @@
 <p><a target="_blank" href="https://app.eraser.io/workspace/ITHfX2CmBRfVZimKKniY" id="edit-in-eraser-github-link"><img alt="Edit in Eraser" src="https://firebasestorage.googleapis.com/v0/b/second-petal-295822.appspot.com/o/images%2Fgithub%2FOpen%20in%20Eraser.svg?alt=media&amp;token=968381c8-a7e7-472a-8ed6-4a6626da5501"></a></p>
 
-# Travel Planner AI - Gateway to Seamless Smart Travel Plan
-Welcome to Travel Planner AI, your ultimate travel companion designed to simplify the process of planning your next adventure.
-Whether you're dreaming of a weekend getaway or a month-long expedition, Travel Planner AI is here to help you meticulously craft your next travel itinerary.
+# WanderAtlan - Gateway to Seamless Smart Travel Plan
+Welcome to WanderAtlan, your ultimate travel companion designed to simplify the process of planning your next adventure.
+Whether you're dreaming of a weekend getaway or a month-long expedition, WanderAtlan is here to help you meticulously craft your next travel itinerary.
 
 ## Overview
-Travel Planner AI is a Software as a Service (SaaS) product that leverages cutting-edge technologies to streamline the travel planning process.
+WanderAtlan is a Software as a Service (SaaS) product that leverages cutting-edge technologies to streamline the travel planning process.
 By simply providing a prompt such as "2 days trip to London with budget $1000," our AI-powered tool generates comprehensive travel plans tailored to your preferences.
 
 ![image](https://github.com/hardikverma22/travel-planner-ai/assets/26103679/de21a51b-6d95-427c-a00a-b919dd09c56e "")
@@ -29,7 +29,7 @@ Check out the live demo [﻿here](https://travelplannerai.online/).
 
 
 ## Installation
-To run the Travel Planner AI, follow these steps:
+To run the WanderAtlan, follow these steps:
 
 1. Clone the repository:git clone [﻿https://github.com/hardikverma22/travel-planner-ai](https://github.com/hardikverma22/travel-planner-ai) 
 2. Navigate to the project directory:cd travel-planner-ai
@@ -37,7 +37,7 @@ To run the Travel Planner AI, follow these steps:
 4. Start the development server:npm run dev
 5. Open your browser and visit [﻿http://localhost:3000](http://localhost:3000/)  to see the app in action.
 ## Technologies Used
-- Travel Planner AI is built using cutting-edge technologies to ensure a seamless user experience.
+- WanderAtlan is built using cutting-edge technologies to ensure a seamless user experience.
 - **Next.js 14:** Leveraging the latest advancements in Next.js for efficient web application development.
 - **Tailwind CSS with Shadcn-UI:** Utilizing Tailwind CSS with Shadcn-UI for responsive and visually stunning user interfaces.
 - **Convex Backend Platform:** Powering our backend infrastructure for robust performance and scalability.
